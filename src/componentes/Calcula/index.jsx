@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './Calcula.css'
 
 const Calcula = () => {
     const [altura, setAltura] = useState(0)
@@ -14,25 +15,25 @@ const Calcula = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Peso (kg):
+            <form className="form-container" onSubmit={handleSubmit}>
+                    <label>Peso (kg):</label>
                     <input
                         type='number'
                         value={peso}
                         onChange={(e) => setPeso(e.target.value)}
                         required
                     />
-                </label>
-                <label>
-                    Altura (cm):
+                    
+                
+                    <label>Altura (cm):</label>
                     <input 
                         type="number" 
                         value={altura} 
                         onChange={(e) => setAltura(e.target.value)} 
                         required 
                     />
-                </label>
+                   
+                
                 <button type="submit">Calcular IMC</button>
             </form>
         </>
